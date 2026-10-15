@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,600&display=swap');
+@import "tailwindcss";
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Manrope", ui-sans-system, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #fdf6f9;
+  color: #1e293b;
+}
+.font-display { font-family: "Playfair Display", Georgia, serif; }
+
+::selection { background: #fda4af; color: #881337; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #fb7185, #c084fc); border-radius: 99px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+@keyframes pulse-dot { 0%,100%{ transform: scale(1); opacity:1 } 50%{ transform: scale(1.7); opacity:.45 } }
+.live-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
+
+@keyframes float-up { from { opacity:0; transform: translateY(14px) } to { opacity:1; transform: translateY(0) } }
+.float-up { animation: float-up .5s cubic-bezier(.22,1,.36,1) both; }
+
+@keyframes float-slow { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-10px) } }
+.float-slow { animation: float-slow 5s ease-in-out infinite; }
+.float-slower { animation: float-slow 7s ease-in-out infinite; }
+
+.typing span { width:6px;height:6px;border-radius:99px;background:#e11d48;display:inline-block;animation: pulse-dot 1s infinite; }
+.typing span:nth-child(2){ animation-delay:.15s } .typing span:nth-child(3){ animation-delay:.3s }
+
+.glass { background: rgba(255,255,255,.72); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+.glass-dark { background: rgba(255,255,255,.14); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
